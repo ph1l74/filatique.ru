@@ -53,9 +53,13 @@ ul.header-links-list {
     font-size: var(--font-size-header-links);
     display: inline-block;
     padding: var(--margin-small) var(--margin-medium);
-    cursor: pointer;
     text-transform: uppercase;
     border-radius: 20px;
+}
+
+.header-links-elem>a, .header-links-elem>a:visited, .header-links-elem>a:focus, .header-links-elem>a:active {
+    text-decoration: none;
+    color: inherit;
 }
 
 .header-links-list>li:not(:last-child) {
@@ -67,7 +71,7 @@ main {
     grid-row: 3 / span 1;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 90vh 90vh 90vh 90vh;
+    grid-template-rows: auto 100vh auto 100vh auto 100vh auto 100vh;
 }
 
 .section {
