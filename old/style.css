@@ -15,6 +15,8 @@
     --grid-padding: 5vh;
     --font-size-basic: 1.4em;
     --font-size-header-links: 1rem;
+    --color-blue: rgb(97, 214, 208);
+    --color-purple: rgb(255, 119, 162);
 }
 
 body {
@@ -36,9 +38,6 @@ body {
 }
 
 header {
-    grid-column: 3 / span 1;
-    grid-row: 2 / span 1;
-    justify-self: center;
     height: var(--header-height);
     background-color: var(--transparent);
     position: fixed;
@@ -47,6 +46,8 @@ header {
 ul.header-links-list {
     list-style: none;
     margin-right: var(--margin-medium);
+    padding: 0;
+    margin-left: 100px;
 }
 
 .header-links-list>li {
@@ -62,6 +63,21 @@ ul.header-links-list {
     color: inherit;
 }
 
+.header-links-elem>a.active {
+    padding: var(--margin-small) var(--margin-medium);
+    font-size: var(--font-size-header-basic);
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--bg-color);
+    background: linear-gradient(219deg, var(--color-blue), var(--color-purple));
+    background-size: 400% 400%;
+    -webkit-animation: linkBg 8s ease infinite;
+    -moz-animation: linkBg 8s ease infinite;
+    animation: linkBg 8s ease infinite;
+}
+
 .header-links-list>li:not(:last-child) {
     margin-right: var(--margin-medium);
 }
@@ -71,7 +87,7 @@ main {
     grid-row: 3 / span 1;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 100vh auto 100vh auto 100vh auto 100vh;
+    grid-template-rows: auto 100vh auto 100vh auto 100vh auto 100vh auto 100vh;
 }
 
 .section {
@@ -93,18 +109,18 @@ main {
 .listen-button {
     display: block;
     float: right;
-    padding: var(--margin-small);
+    padding: var(--margin-small) var(--margin-medium);
     margin-top: var(--margin-medium);
     font-size: var(--font-size-header-basic);
     text-transform: uppercase;
     border-radius: 50px;
     text-align: center;
     cursor: pointer;
-    background: linear-gradient(219deg, #e77096, #8fdbd7);
+    background: linear-gradient(219deg, var(--color-blue), var(--color-purple));
     background-size: 400% 400%;
-    -webkit-animation: linkBg 11s ease infinite;
-    -moz-animation: linkBg 11s ease infinite;
-    animation: linkBg 11s ease infinite;
+    -webkit-animation: linkBg 8s ease infinite;
+    -moz-animation: linkBg 8s ease infinite;
+    animation: linkBg 8s ease infinite;
 }
 
 .hidden {

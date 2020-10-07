@@ -1,0 +1,68 @@
+$primary: #a9001f;
+$link: #7bb1af;
+$info: #7bb1af;
+$success: #e8adab;
+$text: #3f444d;
+
+@mixin transition($x...)
+    -webkit-transition: $x;
+    -moz-transition: $x;
+    -ms-transition: $x;
+    -o-transition: $x;
+    transition: $x;
+
+
+body 
+    font-family: 'Source Sans Pro', sans-serif
+
+
+.flt-navbar 
+    height: 3.25em
+    text-transform: uppercase
+    position: fixed
+    width: 100%
+    margin: 0 auto
+    background: rgba(255,255,255,0)
+    display: flex
+    align-items: center
+    z-index: 100
+
+    .flt-navbar-items
+        width: auto
+        margin: 0 auto
+        color: rgba(255,255,255, 1)
+
+        .flt-navbar-item
+            margin: 0px 10px
+            color: rgba(255,255,255, 1)
+            padding: 8px
+            border-radius: 4px
+            @include transition(background 0.5s)
+            &:hover
+                background: rgba(255,255,255,0.25)
+
+.fullwidth 
+    width: 100%
+
+.listen 
+    background-color: rgb(1,1,1)
+
+
+.listen-button
+    cursor: pointer
+    text-transform: uppercase
+
+
+.listen-links-shown 
+    display: block
+
+    a 
+        color: $primary
+
+
+.listen-links-hidden
+    display: none
+
+
+.releaser-icon 
+    margin: 2px 6px -2px;
