@@ -19,7 +19,8 @@ export const initLinks = [
 
 export const icons = {
   apple: 'apple',
-  spotify: 'spotify'
+  spotify: 'spotify',
+  youtube: 'youtube'
 }
 
 const releasers = {
@@ -30,6 +31,10 @@ const releasers = {
   spotify: {
     icon: icons.spotify,
     label: 'Spotify'
+  },
+  youtube: {
+    icon: icons.youtube,
+    label: 'Youtube Music'
   }
 }
 
@@ -48,6 +53,10 @@ export const releases = [
         releaser: releasers.spotify,
         url: 'https://open.spotify.com/album/3V8i9w61YUBQ6zQqnZkMgn'
       },
+      {
+        releaser: releasers.youtube,
+        url: 'https://www.youtube.com/watch?v=YvSz5x7Gmzs&list=OLAK5uy_l8ncIIjfoOQ_xTz5ntMsQaaLMzl5odX0I&ab_channel=Filatique-Topic'
+      }
     ]
   },
   {

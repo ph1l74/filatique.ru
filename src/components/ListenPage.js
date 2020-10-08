@@ -8,7 +8,7 @@ const Listen = () => {
     const { Column } = Columns;
 
     return (
-        <Columns className="fullwidth">
+        <Columns>
             <Column size="half" offset="one-quarter"
                 mobile={{
                     size: 10,
@@ -31,7 +31,7 @@ const Listen = () => {
                     size: 8,
                     offset: 2
                 }}>
-                <Columns className="fullwidth">
+                <Columns className="fullwidth centered">
                     {releases.map((release, i) => (
                         <Release key={i} releaseInfo={release}></Release>
                     ))}

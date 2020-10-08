@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Columns from 'react-bulma-components/lib/components/columns';
 import Card from 'react-bulma-components/lib/components/card';
 import Media from 'react-bulma-components/lib/components/media';
@@ -6,11 +6,21 @@ import Heading from 'react-bulma-components/lib/components/heading';
 import Content from 'react-bulma-components/lib/components/content';
 import ListenLink from './ListenLink';
 
+
 const Release = (props) => {
 
     const { Column } = Columns;
     const { label, year, img, description, links } = props.releaseInfo;
-    const [toggled, setToggle] = useState(false)
+    const descRef = useRef();
+    const [toggled, setToggle] = useState(false);
+    const [active, setActive] = useState(false);
+    const [descHidden, setDesc] = useState(false);
+
+    useEffect(() => {
+        if (descRef.current) {
+            if (descRef.current.offsetHeight > 168) setDesc(true);
+        }
+    }, [descRef])
 
     /*
 
@@ -33,8 +43,18 @@ const Release = (props) => {
 
     */
 
+    const releaseHandler = () => {
+        setActive(true);
+    }
+
     const listenHandler = () => {
         setToggle(!toggled);
+    }
+
+    const descHandler = (e) => {
+        if (descHidden) {
+            setDesc(false);
+        }
     }
 
     return (
@@ -54,7 +74,7 @@ const Release = (props) => {
             fullhd={{
                 size: 4
             }}>
-            <Card>
+            <Card className={active ? "release active" : "release"} onClick={releaseHandler}>
                 <Card.Image size="1by1" src={img} />
                 <Card.Content>
                     <Media>
@@ -64,13 +84,15 @@ const Release = (props) => {
                         </Media.Item>
                     </Media>
                     <Content>
-                        {description}
+                        <div ref={descRef} className={descHidden ? "release-description release-description-hidden" : "release-description release-description-shown"} onClick={descHandler}>
+                            {description}
+                        </div>
                     </Content>
                 </Card.Content>
                 <Card.Footer>
                     <Card.Footer.Item renderAs="div" onClick={listenHandler} className="listen-button">Listen</Card.Footer.Item>
                 </Card.Footer>
-                <div className={toggled ? 'listen-links-shown' : 'listen-links-hidden'}>
+                <div className={toggled ? 'listen-links listen-links-shown' : 'listen-links listen-links-hidden'}>
                     {
                         links.map(
                             (link, i) => (
