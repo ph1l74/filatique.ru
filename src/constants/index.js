@@ -24,6 +24,9 @@ export const icons = {
   deezer: 'deezer',
   bandcamp: 'bandcamp',
   soundcloud: 'soundcloud',
+  vk: 'vk',
+  facebook: 'facebook',
+  gmail: 'gmail'
 }
 
 const releasers = {
