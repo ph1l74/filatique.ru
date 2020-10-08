@@ -20,7 +20,10 @@ export const initLinks = [
 export const icons = {
   apple: 'apple',
   spotify: 'spotify',
-  youtube: 'youtube'
+  youtube: 'youtube',
+  deezer: 'deezer',
+  bandcamp: 'bandcamp',
+  soundcloud: 'soundcloud',
 }
 
 const releasers = {
@@ -35,6 +38,21 @@ const releasers = {
   youtube: {
     icon: icons.youtube,
     label: 'Youtube Music'
+  },
+  bandcamp: {
+    icon: icons.bandcamp,
+    label: 'Bandcamp'
+  },
+  deezer: {
+    icon: icons.deezer,
+    label: 'Deezer'
+  },
+  soundcloud: {
+    icon: icons.soundcloud,
+    label: 'Soundcloud'
+  },
+  juno: {
+    label: 'JunoRecords'
   }
 }
 
@@ -56,6 +74,10 @@ export const releases = [
       {
         releaser: releasers.youtube,
         url: 'https://www.youtube.com/watch?v=YvSz5x7Gmzs&list=OLAK5uy_l8ncIIjfoOQ_xTz5ntMsQaaLMzl5odX0I&ab_channel=Filatique-Topic'
+      },
+      {
+        releaser: releasers.bandcamp,
+        url: 'https://filatique.bandcamp.com/album/neither-drums-nor-horns'
       }
     ]
   },
@@ -66,13 +88,9 @@ export const releases = [
     description: "Nightroads — мой второй альбом, представляющий из себя историю историй. Десять совершенно разных сюжетов, объединенных тем, что собраны они одним человеком. Название выбрано не случайно, так как в основе идеи для альбома лежит почти что одноименная книга Гайто Газданова «Ночные дороги». Главным героем книги является водитель такси, работающий каждую ночь на улицах Парижа. Именно это атмосферу ночной столицы Франции я и хотел передать. В качестве обложки была выбрана картина Джеймса Уистлера, которая вызывает в моей голове образы одиноких парижских столбов, наблюдающих за проносящимися снизу автомобилями. В общем, приятного прослушивания и погружения.",
     links: [
       {
-        releaser: releasers.appleMusic,
-        url: 'https://music.apple.com/ru/album/%D0%BD%D0%B8-%D0%B1%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D0%BD%D0%BE%D0%B2-%D0%BD%D0%B8-%D1%82%D1%80%D1%83%D0%B1/1519196123'
-      },
-      {
-        releaser: releasers.spotify,
-        url: 'https://open.spotify.com/album/3V8i9w61YUBQ6zQqnZkMgn'
-      },
+        releaser: releasers.bandcamp,
+        url: 'https://filatique.bandcamp.com/album/nightroads'
+      }
     ]
   },
   {
@@ -83,12 +101,28 @@ export const releases = [
     links: [
       {
         releaser: releasers.appleMusic,
-        url: 'https://music.apple.com/ru/album/%D0%BD%D0%B8-%D0%B1%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D0%BD%D0%BE%D0%B2-%D0%BD%D0%B8-%D1%82%D1%80%D1%83%D0%B1/1519196123'
+        url: 'https://music.apple.com/ru/album/nanashi/1298040303'
       },
       {
         releaser: releasers.spotify,
-        url: 'https://open.spotify.com/album/3V8i9w61YUBQ6zQqnZkMgn'
+        url: 'https://open.spotify.com/album/0KHLBF4keOycNG5cWukNoK'
       },
+      {
+        releaser: releasers.youtube,
+        url: 'https://www.youtube.com/watch?v=YvSz5x7Gmzs&list=OLAK5uy_l8ncIIjfoOQ_xTz5ntMsQaaLMzl5odX0I'
+      },
+      {
+        releaser: releasers.deezer,
+        url: 'https://www.deezer.com/ru/album/50134502'
+      },
+      {
+        releaser: releasers.bandcamp,
+        url: 'https://naturalfetch.bandcamp.com/album/nf002-nanashi'
+      },
+      {
+        releaser: releasers.juno,
+        url: 'https://www.juno.co.uk/products/filatique-nanashi/614399-01/'
+      }
     ]
   },
 ];

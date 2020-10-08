@@ -1,5 +1,5 @@
 import React from 'react';
-import { Applemusic, Spotify, Youtubemusic } from '@icons-pack/react-simple-icons';
+import { Applemusic, Bandcamp, Deezer, Soundcloud, Spotify, Youtubemusic } from '@icons-pack/react-simple-icons';
 import { icons } from '../constants';
 
 
@@ -17,6 +17,12 @@ const Icon = ({ iconId }) => {
                 return <Spotify {...props} />
             case icons.youtube:
                 return <Youtubemusic {...props} />
+            case icons.bandcamp:
+                return <Bandcamp {...props} />
+            case icons.deezer:
+                return <Deezer {...props} />
+            case icons.soundcloud:
+                return <Soundcloud {...props} />
             default:
                 return <span></span>
         }

@@ -4,6 +4,8 @@ $info: #7bb1af;
 $success: #e8adab;
 $text: #3f444d;
 
+$fontWide: 'Montserrat', sans-serif;
+
 @mixin transition($x...)
     -webkit-transition: $x;
     -moz-transition: $x;
@@ -13,7 +15,11 @@ $text: #3f444d;
 
 
 body 
-    font-family: 'Source Sans Pro', sans-serif
+    // font-family: 'Source Sans Pro', sans-serif
+    // font-family: $fontWide
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto Slab', serif;
 
 
 .flt-navbar 
@@ -29,7 +35,7 @@ body
     z-index: 100
 
     &.highlighted
-        background: rgba(0,0,0,0.5)
+        background: rgba(0,0,0,0.75)
 
     .flt-navbar-items
         width: auto
@@ -66,7 +72,7 @@ body
         color: $primary
 
     &.listen-links-shown 
-        max-height: 300px
+        max-height: 800px
         opacity: 1
 
     &.listen-links-hidden
@@ -79,7 +85,7 @@ body
     margin: 2px 6px -2px;
 
 .release-description 
-    @include transition(max-height 0.25s, opacity 0.25s)
+    @include transition(max-height 0.5s, opacity 0.5s )
     position: relative
     // max-height: 00px;
 
