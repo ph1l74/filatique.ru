@@ -3,6 +3,8 @@ $link: #7bb1af;
 $info: #7bb1af;
 $success: #e8adab;
 $text: #3f444d;
+// $column-gap: 13rem;
+
 
 $fontWide: 'Montserrat', sans-serif;
 
@@ -21,6 +23,8 @@ body
     font-family: 'Roboto', sans-serif;
     // font-family: 'Roboto Slab', serif;
 
+a
+    color: $primary
 
 .flt-navbar 
     @include transition(background 0.25s)
@@ -124,3 +128,20 @@ body
         -webkit-box-shadow: -1px -1px 39px -19px rgba(255,255,255,0.75);
         -moz-box-shadow: -1px -1px 39px -19px rgba(255,255,255,0.75);
         box-shadow: -1px -1px 39px -19px rgba(255,255,255,0.75);
+
+
+.flt-contact-el
+    text-align: center;
+    height: 100%;
+    margin: auto;
+    margin-top: 4em;
+    // margin-bottom: 4em;
+
+
+.flt-contact-el
+    @include transition(all 0.25s, opacity 0.25s)
+    &:hover
+        transform: scale(1.2);
+
+.hard-flex
+    display: flex;

@@ -3,6 +3,7 @@ import 'react-bulma-components/dist/react-bulma-components.min.css';
 import Section from './components/Section';
 import Navigation from './components/Navigation';
 import Listen from 'components/ListenPage';
+import Contact from 'components/ContactPage';
 
 
 function App() {
@@ -14,9 +15,11 @@ function App() {
       <Section id="listen" className="listen">
         <Listen />
       </Section>
-      <Section id="press" ></Section>
-      <Section id="socials" ></Section>
-      <Section id="contact" ></Section>
+      {/* <Section id="press" ></Section> */}
+      {/* <Section id="socials" ></Section> */}
+      <Section id="contact" >
+        <Contact />
+      </Section>
     </div>
   );
 }

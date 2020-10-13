@@ -26,7 +26,9 @@ export const icons = {
   soundcloud: 'soundcloud',
   vk: 'vk',
   facebook: 'facebook',
-  gmail: 'gmail'
+  mail: 'mail',
+  instagram: 'instagram',
+  tumblr: 'tumblr'
 }
 
 const releasers = {
@@ -58,6 +60,60 @@ const releasers = {
     label: 'JunoRecords'
   }
 }
+
+export const socials = {
+  spotify: {
+    icon: icons.spotify,
+    url: 'https://open.spotify.com/artist/4MEwu8ezN45uF1DWY1N5oV',
+    blank: true
+  },
+  appleMusic: {
+    icon: icons.apple,
+    url: 'https://music.apple.com/ru/artist/filatique/1298040379',
+    blank: true
+  },
+  youtube: {
+    icon: icons.youtube,
+    url: 'https://www.youtube.com/channel/UCu0e5q3K9JuGMRdAYpjCg4A',
+    blank: true
+  },
+  instagram: {
+    icon: icons.instagram,
+    url: 'https://www.instagram.com/filatique/',
+    blank: true
+  },
+  facebook: {
+    icon: icons.facebook,
+    url: 'https://www.facebook.com/filatique/',
+    blank: true
+  },
+  vk: {
+    icon: icons.vk,
+    url: 'https://vk.com/filatique',
+    blank: true
+  },
+  bandcamp: {
+    icon: icons.bandcamp,
+    url: 'https://filatique.bandcamp.com/',
+    blank: true
+  },
+  soundcloud: {
+    icon: icons.soundcloud,
+    url: 'https://soundcloud.com/filatique',
+    blank: true
+  },
+  tumblr: {
+    icon: icons.tumblr,
+    url: 'https://filatique.tumblr.com/',
+    blank: true
+  },
+  mail: {
+    icon: icons.mail,
+    url: 'mailto:filatique@gmail.com',
+    blank: true
+  }
+}
+
 
 export const releases = [
   {

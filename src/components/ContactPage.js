@@ -1,18 +1,19 @@
 import React from 'react';
 import Columns from 'react-bulma-components/lib/components/columns';
-import Release from 'components/Release';
-import { releases } from '../constants';
+import ContactEl from '../components/ContactEl';
+import { socials } from '../constants';
 
-const Listen = () => {
+const Contact = () => {
 
     const { Column } = Columns;
 
     return (
-        <Columns>
-            <Column size="half" offset="one-quarter"
+        <Columns className="fullwidth">
+            <Column centered
                 mobile={{
                     size: 10,
                     offset: 1
+
                 }}
                 tablet={{
                     size: 8,
@@ -30,14 +31,16 @@ const Listen = () => {
                     size: 8,
                     offset: 2
                 }}>
-                <Columns className="fullwidth centered">
-                    {releases.map((release, i) => (
-                        <Release key={i} releaseInfo={release}></Release>
+                <Columns centered className="hard-flex">
+
+                    {Object.keys(socials).map((k, i) => (
+                        <ContactEl contactProps={socials[k]} key={i} />
                     ))}
+
                 </Columns>
             </Column>
         </Columns>
     )
 }
 
-export default Listen;
+export default Contact;

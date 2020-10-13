@@ -1,34 +1,39 @@
 import React from 'react';
-import { Applemusic, Bandcamp, Deezer, Soundcloud, Spotify, Youtubemusic, Vk, Facebook, Gmail } from '@icons-pack/react-simple-icons';
+import { Applemusic, Bandcamp, Deezer, Soundcloud, Spotify, Youtubemusic, Vk, Facebook, Gmail, Instagram, Tumblr } from '@icons-pack/react-simple-icons';
 import { icons } from '../constants';
 
 
-const Icon = ({ iconId }) => {
+const Icon = (props) => {
 
-    const props = {
-        size: 16
+    const options = {
+        size: 16,
+        ...props
     }
 
     const renderOptions = (id) => {
         switch (id) {
             case icons.apple:
-                return <Applemusic {...props} />
+                return <Applemusic {...options} />
             case icons.spotify:
-                return <Spotify {...props} />
+                return <Spotify {...options} />
             case icons.youtube:
-                return <Youtubemusic {...props} />
+                return <Youtubemusic {...options} />
             case icons.bandcamp:
-                return <Bandcamp {...props} />
+                return <Bandcamp {...options} />
             case icons.deezer:
-                return <Deezer {...props} />
+                return <Deezer {...options} />
             case icons.soundcloud:
-                return <Soundcloud {...props} />
+                return <Soundcloud {...options} />
             case icons.facebook:
-                return <Facebook {...props} />
+                return <Facebook {...options} />
             case icons.vk:
-                return <Vk {...props} />
-            case icons.gmail:
-                return <Gmail {...props} />
+                return <Vk {...options} />
+            case icons.mail:
+                return <Gmail {...options} />
+            case icons.instagram:
+                return <Instagram {...options} />
+            case icons.tumblr:
+                return <Tumblr {...options} />
             default:
                 return <span></span>
         }
@@ -36,7 +41,7 @@ const Icon = ({ iconId }) => {
 
     return (
         <span className="releaser-icon">
-            {renderOptions(iconId)}
+            {renderOptions(props.iconId)}
         </span>
     )
 }
