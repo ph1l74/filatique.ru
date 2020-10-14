@@ -1,5 +1,5 @@
 import React from 'react';
-import { Applemusic, Bandcamp, Deezer, Soundcloud, Spotify, Youtubemusic, Vk, Facebook, Gmail, Instagram, Tumblr } from '@icons-pack/react-simple-icons';
+import { Applemusic, Bandcamp, Deezer, Soundcloud, Spotify, Youtubemusic, Vk, Facebook, Gmail, Instagram, Tumblr, Mixcloud, LastDotFm, Discogs } from '@icons-pack/react-simple-icons';
 import { icons } from '../constants';
 
 
@@ -34,6 +34,12 @@ const Icon = (props) => {
                 return <Instagram {...options} />
             case icons.tumblr:
                 return <Tumblr {...options} />
+            case icons.mixcloud:
+                return <Mixcloud {...options} />
+            case icons.lastfm:
+                return <LastDotFm {...options} />
+            case icons.discogs:
+                return <Discogs {...options} />
             default:
                 return <span></span>
         }

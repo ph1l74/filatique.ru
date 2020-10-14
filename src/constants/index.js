@@ -10,11 +10,7 @@ export const initLinks = [
   {
     label: "Socials",
     url: "#socials",
-  },
-  {
-    label: "Contact",
-    url: "#contact",
-  },
+  }
 ];
 
 export const icons = {
@@ -28,7 +24,11 @@ export const icons = {
   facebook: 'facebook',
   mail: 'mail',
   instagram: 'instagram',
-  tumblr: 'tumblr'
+  tumblr: 'tumblr',
+  lastfm: 'lastfm',
+  discogs: 'discogs',
+  mixcloud: 'mixcloud'
+
 }
 
 const releasers = {
@@ -100,6 +100,21 @@ export const socials = {
   soundcloud: {
     icon: icons.soundcloud,
     url: 'https://soundcloud.com/filatique',
+    blank: true
+  },
+  mixcloud: {
+    icon: icons.mixcloud,
+    url: 'https://www.mixcloud.com/filatique/',
+    blank: true
+  },
+  lastfm: {
+    icon: icons.lastfm,
+    url: 'https://www.last.fm/ru/music/filatique',
+    blank: true
+  },
+  discogs: {
+    icon: icons.discogs,
+    url: 'https://www.discogs.com/ru/artist/4756067-Filatique',
     blank: true
   },
   tumblr: {
@@ -185,3 +200,76 @@ export const releases = [
     ]
   },
 ];
+
+export const press = [
+  {
+    title: 'About Filatique',
+    articles: [
+      {
+        source: 'Black Music Promo',
+        url: 'http://blackmusicpromo.ru/faces/filatique.html',
+        title: 'filatique FKA phlbeats'
+      }
+    ]
+  },
+  {
+    title: 'About Nanashi',
+    articles: [
+      {
+        source: 'Far From Moscow',
+        url: 'https://online.flowpaper.com/74dd071e/20145VymirOneGinPleaseAntethicandOvercampsFlowPaperJoined/#page=34',
+        title: 'High-Frequency Pressures: Cream Soda, Mamanet, Naadya, and Filatique'
+      }
+    ]
+  },
+  {
+    title: 'About Nightroads',
+    articles: [
+      {
+        source: 'Black Music Promo',
+        url: 'http://www.blackmusicpromo.ru/releases/item/278.html',
+        title: 'Filatique Nightroads'
+      }
+    ]
+  },
+  {
+    title: 'About Neither Drums, Nor Horns',
+    articles: [
+      {
+        source: 'Far From Moscow',
+        url: 'https://online.flowpaper.com/74dd071e/2016AlesTsurkoAYEquinoxFlowerandChitoonFlowPaperJoined/#page=9',
+        title: 'Abstract Worlds: Ewan Limb, Filatique, Moonscape, and Phil Anker'
+      }
+    ]
+  },
+  {
+    title: 'Other',
+    articles: [
+      {
+        source: 'Frequency Asia Podcasts',
+        url: 'https://freqasia.tumblr.com/post/104156740530/frequency-asia-episode-011-back-in-the-weekly',
+        title: 'Frequency Asia Podcasts - Episode 011'
+      },
+      {
+        source: 'Frequency Asia Podcasts',
+        url: 'https://frequencyasia.bandcamp.com/album/frequency-asia-volume-1',
+        title: 'Frequency Asia Volume 1'
+      },
+      {
+        source: 'Kennel Beats',
+        url: 'http://kennelbeats.ru/artist/filatique',
+        title: 'Filatique Artist Page'
+      },
+      {
+        source: 'Husky Tunes',
+        url: 'http://huskytunes.ru/hiphop',
+        title: 'Hip-hop page with Filatique artist card'
+      },
+      {
+        source: 'Frequency Asia Podcasts',
+        url: 'https://frequencyasia.bandcamp.com/album/frequency-asia-volume-1',
+        title: 'Frequency Asia Volume 1'
+      },
+    ]
+  },
+]
