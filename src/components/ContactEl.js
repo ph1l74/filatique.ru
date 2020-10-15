@@ -26,7 +26,7 @@ const ContactEl = (props) => {
                 size: 2
             }}>
             <a href={url} target={blank ? "_blank" : null}>
-                <Icon iconId={icon} size={72}></Icon>
+                <Icon iconId={icon} size={64}></Icon>
             </a>
         </Column>
     )
