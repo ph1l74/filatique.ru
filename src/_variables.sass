@@ -16,6 +16,25 @@ $fontArticle: 'Roboto Slab', serif;
     -o-transition: $x;
     transition: $x;
 
+@keyframes bgAnimation
+    0%  
+        background-position: 0% 50%;
+    50% 
+        background-position: 100% 50%;
+    100% 
+        background-position: 0% 50%;
+
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content
+  
+
 // font-family: 'Source Sans Pro', sans-serif
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Open Sans', sans-serif;
@@ -175,6 +194,8 @@ a
 
 .flt-press-type
     margin-bottom: 40px;
+    .title
+        text-shadow: 2px 2px rgba(255, 255, 255, 0.3), 4px 4px rgba(255, 255, 255, 0.15), 6px 6px rgba(255, 255, 255, 0.05);
 
 .flt-press-el
     @include transition(transform 0.25s, opacity 0.25s, box-shadow 0.25s);
@@ -200,7 +221,8 @@ a
         width: 100%;
 
 .press 
-    background-color: $link;
+    background: rgb(123,177,175);
+    background: linear-gradient(135deg, rgba(123,177,175,1) 0%, rgba(33,161,156,1) 100%);
 
 .socials
     .flt-section-title
@@ -208,3 +230,35 @@ a
 
 .title
     color: rgba(15,15,15,1);
+
+.flt-section
+    &.home
+        box-shadow: 0 10px 20px rgba(169, 0, 31, 0.3);
+        z-index: 10
+        background: rgb(130,8,8);
+        background: -moz-linear-gradient(315deg, rgba(130,8,8,1) 0%, rgba(233,64,144,1) 43%, rgba(242,47,33,1) 100%);
+        background: -webkit-linear-gradient(315deg, rgba(130,8,8,1) 0%, rgba(233,64,144,1) 43%, rgba(242,47,33,1) 100%);
+        background: linear-gradient(315deg, rgba(130,8,8,1) 0%, rgba(233,64,144,1) 43%, rgba(242,47,33,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#820808",endColorstr="#f22f21",GradientType=1);
+        background-size: 400% 400%;
+        animation: bgAnimation 30s ease infinite;
+
+    &.listen
+        box-shadow: 0 10px 20px rgba(15, 15, 15, 0.3);
+        z-index: 9
+    &.press
+        box-shadow: 0 10px 20px rgba(33, 161, 156, 0.3);
+        z-index: 8
+    &.socials
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+        z-index: 7
+
+.flt-bg-img
+    position: absolute;
+    opacity: 0.05;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+
+	

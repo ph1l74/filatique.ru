@@ -11,15 +11,15 @@ function App() {
   return (
     <div>
       <Navigation />
-      <Section id="home" color="primary" gradient title="filatique">
+      <Section id="home" className="flt-section home" title="filatique" imgSrc="/img/bg-cover.jpg">
       </Section>
-      <Section id="listen" className="listen" title="listen">
+      <Section id="listen" className="flt-section listen" title="listen">
         <Listen />
       </Section>
-      <Section id="press" className="press" title="press">
+      <Section id="press" className="flt-section press" title="press">
         <Press />
       </Section>
-      <Section id="socials" title="socials" className="socials">
+      <Section id="socials" className="flt-section socials" title="socials" >
         <Contact />
       </Section>
     </div>
