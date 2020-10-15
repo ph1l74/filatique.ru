@@ -1,5 +1,6 @@
 import React from 'react';
 import Columns from 'react-bulma-components/lib/components/columns';
+import ReactWOW from 'react-wow';
 import ContactEl from '../components/ContactEl';
 import { socials } from '../constants';
 
@@ -33,9 +34,17 @@ const Contact = () => {
                 }}>
                 <Columns centered className="hard-flex">
 
-                    {Object.keys(socials).map((k, i) => (
-                        <ContactEl contactProps={socials[k]} key={i} />
-                    ))}
+                    {Object.keys(socials).map((k, i) => {
+
+                        const delay = Math.random().toFixed(2);
+
+                        return (
+                            <ReactWOW delay={`${delay}s`} animation="fadeIn" duration="0.75s">
+                                <ContactEl contactProps={socials[k]} key={'socials_' + i} />
+                            </ReactWOW>
+                        )
+                    }
+                    )}
 
                 </Columns>
             </Column>

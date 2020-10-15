@@ -1,6 +1,6 @@
 import React from 'react';
 import Columns from 'react-bulma-components/lib/components/columns';
-import Release from 'components/Release';
+import Release from '../components/Release';
 import { releases } from '../constants';
 
 const Listen = () => {

@@ -1,6 +1,7 @@
 import React from 'react';
-import Icon from '../components/Icon'
 import Columns from 'react-bulma-components/lib/components/columns';
+import ReactWOW from 'react-wow';
+import Icon from '../components/Icon'
 
 const ContactEl = (props) => {
 
@@ -9,26 +10,28 @@ const ContactEl = (props) => {
     const { icon, url, blank } = props.contactProps;
 
     return (
-        <Column className="flt-contact-el"
-            mobile={{
-                size: 3
-            }}
-            tablet={{
-                size: 3
-            }}
-            desktop={{
-                size: 2
-            }}
-            widescreen={{
-                size: 2
-            }}
-            fullhd={{
-                size: 2
-            }}>
-            <a href={url} target={blank ? "_blank" : null}>
-                <Icon iconId={icon} size={64}></Icon>
-            </a>
-        </Column>
+        <ReactWOW delay={`${(Math.random() * 2).toFixed(2)}s`} animation="fadeIn" duration="0.75s">
+            <Column className="flt-contact-el"
+                mobile={{
+                    size: 3
+                }}
+                tablet={{
+                    size: 3
+                }}
+                desktop={{
+                    size: 2
+                }}
+                widescreen={{
+                    size: 2
+                }}
+                fullhd={{
+                    size: 2
+                }}>
+                <a href={url} target={blank ? "_blank" : null}>
+                    <Icon iconId={icon} size={64}></Icon>
+                </a>
+            </Column>
+        </ReactWOW>
     )
 }
 

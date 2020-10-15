@@ -15,7 +15,8 @@
     "react-bulma-components": "^3.4.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "react-transition-group": "^4.4.1"
+    "react-transition-group": "^4.4.1",
+    "react-wow": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

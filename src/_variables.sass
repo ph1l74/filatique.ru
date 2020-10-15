@@ -162,11 +162,18 @@ a
     margin-top: 4em;
     // margin-bottom: 4em;
 
+a
+    &:hover
+        color: $link;
 
 .flt-contact-el
-    @include transition(all 0.25s, opacity 0.25s)
+    @include transition(color 0.25s, opacity 0.25s, transform 0.25s)
     &:hover
         transform: scale(1.2);
+        color: $link;
+        a
+            color: $link;
+
 
 .hard-flex
     display: flex;
@@ -179,6 +186,7 @@ a
 
 
 .flt-section-title 
+    
     font-weight: 400;
     font-size: 6em;
     color: rgba(255,255,255, 0.25);
@@ -193,6 +201,7 @@ a
     user-select: none; 
 
 .flt-press-type
+    color: rgba(255,255,255,1);
     margin-bottom: 40px;
     .title
         text-shadow: 2px 2px rgba(255, 255, 255, 0.3), 4px 4px rgba(255, 255, 255, 0.15), 6px 6px rgba(255, 255, 255, 0.05);

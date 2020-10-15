@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { Transition } from 'react-transition-group';
+import ReactWOW from 'react-wow';
 import { initLinks as links } from '../constants';
 import { useScroll } from '../hooks/useScroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -23,62 +23,38 @@ const Navigation = () => {
     }
   }, [scrollY])
 
-  const duration = 250;
-
-  const defaultStyle = {
-    transition: `opacity ${duration}ms ease-in-out`,
-    opacity: 0,
-    y: '-100px'
-  }
-
-  const transitionStyles = {
-    entering: { opacity: 1, y: 0 },
-    entered: { opacity: 1, y: 0 },
-    exiting: { opacity: 0, y: -100 },
-    exited: { opacity: 0, y: -100 },
-  };
-
-
   return (
     <div className={highlighted ? "flt-navbar highlighted" : "flt-navbar"}>
 
       <div className="flt-navbar-items">
         {
           scrolled ?
-            <Transition timeout={2000} appear={true} enter={true} in={true}>
-              {
-                state => (
-                  <AnchorLink href="#home" key="home" className="flt-navbar-item" style={{
-                    ...defaultStyle,
-                    ...transitionStyles[state]
-                  }}>
-                    <FontAwesomeIcon icon={faHome} />
-                  </AnchorLink>
-                )
-              }
-
-            </Transition>
+            <ReactWOW animation="fadeInDown" duration='1s'>
+              <AnchorLink href="#home" key="home" className="flt-navbar-item">
+                <FontAwesomeIcon icon={faHome} />
+              </AnchorLink>
+            </ReactWOW>
             : null
         }
 
-        {links.map((link, i) => (
-          <Transition timeout={duration} key={i} appear in={true}>
-            {
-              state => (
-                <AnchorLink href={link.url} key={i} className="flt-navbar-item" style={{
-                  ...defaultStyle,
-                  ...transitionStyles[state]
-                }}>
+        {
+          links.map((link, i) => {
+            const delay = i * 100 / 1000 + 1;
+            return (
+              <ReactWOW delay={`${delay}s`} animation="fadeInDown" duration="0.75s">
+                <AnchorLink href={link.url} key={'key_' + i} className="flt-navbar-item">
                   {link.label}
                 </AnchorLink>
-              )
-            }
-          </Transition>
-        ))}
+              </ReactWOW>
+            )
+          }
+          )
+        }
       </div>
 
 
     </div >
   );
 };
+
 export default Navigation;

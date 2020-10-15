@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import ReactWOW from 'react-wow';
 import Columns from 'react-bulma-components/lib/components/columns';
 import Card from 'react-bulma-components/lib/components/card';
 import Media from 'react-bulma-components/lib/components/media';
@@ -58,51 +59,53 @@ const Release = (props) => {
     }
 
     return (
-        <Column
-            mobile={{
-                size: 12
-            }}
-            tablet={{
-                size: 6
-            }}
-            desktop={{
-                size: 6
-            }}
-            widescreen={{
-                size: 4
-            }}
-            fullhd={{
-                size: 4
-            }}>
-            <Card className={active ? "release active" : "release"} onClick={releaseHandler}>
-                <Card.Image size="1by1" src={img} />
-                <Card.Content>
-                    <Media>
-                        <Media.Item>
-                            <Heading size={4}>{label}</Heading>
-                            <Heading subtitle size={6}>{year}</Heading>
-                        </Media.Item>
-                    </Media>
-                    <Content>
-                        <div ref={descRef} className={descHidden ? "release-description release-description-hidden" : "release-description release-description-shown"} onClick={descHandler}>
-                            {description}
-                        </div>
-                    </Content>
-                </Card.Content>
-                <Card.Footer>
-                    <Card.Footer.Item renderAs="div" onClick={listenHandler} className="listen-button">Listen</Card.Footer.Item>
-                </Card.Footer>
-                <div className={toggled ? 'listen-links listen-links-shown' : 'listen-links listen-links-hidden'}>
-                    {
-                        links.map(
-                            (link, i) => (
-                                <ListenLink linkProps={link} key={i} />
+        <ReactWOW delay={`${(Math.random() * 1.25).toFixed(2)}s`} animation="fadeIn" duration="0.5s">
+            <Column
+                mobile={{
+                    size: 12
+                }}
+                tablet={{
+                    size: 6
+                }}
+                desktop={{
+                    size: 6
+                }}
+                widescreen={{
+                    size: 4
+                }}
+                fullhd={{
+                    size: 4
+                }}>
+                <Card className={active ? "release active" : "release"} onClick={releaseHandler}>
+                    <Card.Image size="1by1" src={img} />
+                    <Card.Content>
+                        <Media>
+                            <Media.Item>
+                                <Heading size={4}>{label}</Heading>
+                                <Heading subtitle size={6}>{year}</Heading>
+                            </Media.Item>
+                        </Media>
+                        <Content>
+                            <div ref={descRef} className={descHidden ? "release-description release-description-hidden" : "release-description release-description-shown"} onClick={descHandler}>
+                                {description}
+                            </div>
+                        </Content>
+                    </Card.Content>
+                    <Card.Footer>
+                        <Card.Footer.Item renderAs="div" onClick={listenHandler} className="listen-button">Listen</Card.Footer.Item>
+                    </Card.Footer>
+                    <div className={toggled ? 'listen-links listen-links-shown' : 'listen-links listen-links-hidden'}>
+                        {
+                            links.map(
+                                (link, i) => (
+                                    <ListenLink linkProps={link} key={i} />
+                                )
                             )
-                        )
-                    }
-                </div>
-            </Card>
-        </Column>
+                        }
+                    </div>
+                </Card>
+            </Column>
+        </ReactWOW>
     )
 }
 

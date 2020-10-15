@@ -7,6 +7,7 @@ const PressEl = (props) => {
     const { source, url, title } = props.pressProps;
 
     return (
+
         <Column className="flt-press-el" renderAs="a" href={url} target="_blank"
             mobile={{
                 size: 12
@@ -24,8 +25,8 @@ const PressEl = (props) => {
                 size: 12
             }}>
             {/* <a href={url} target="_blank" rel="noopener noreferrer"> */}
-                <div className="flt-press-el-source">{source}</div>
-                <div className="flt-press-el-title">{title}</div>
+            <div className="flt-press-el-source">{source}</div>
+            <div className="flt-press-el-title">{title}</div>
             {/* </a> */}
         </Column>
     )
