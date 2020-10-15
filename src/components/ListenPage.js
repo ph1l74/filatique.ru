@@ -32,7 +32,7 @@ const Listen = () => {
                 }}>
                 <Columns className="fullwidth centered">
                     {releases.map((release, i) => (
-                        <Release key={i} releaseInfo={release}></Release>
+                        <Release key={'rel_' + i} releaseInfo={release}></Release>
                     ))}
                 </Columns>
             </Column>

@@ -27,7 +27,8 @@ export const icons = {
   tumblr: 'tumblr',
   lastfm: 'lastfm',
   discogs: 'discogs',
-  mixcloud: 'mixcloud'
+  mixcloud: 'mixcloud',
+  telegram: 'telegram'
 
 }
 
@@ -90,6 +91,11 @@ export const socials = {
   vk: {
     icon: icons.vk,
     url: 'https://vk.com/filatique',
+    blank: true
+  },
+  telegram: {
+    icon: icons.telegram,
+    url: 'https://t.me/filatique',
     blank: true
   },
   bandcamp: {

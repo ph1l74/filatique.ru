@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Navigation />
-      <Section id="home" className="flt-section home" title="filatique" imgSrc="/img/bg-cover.jpg">
+      <Section id="home" className="flt-section home" title="filatique" imgsrc="/img/bg-cover.jpg">
       </Section>
       <Section id="listen" className="flt-section listen" title="listen">
         <Listen />

@@ -10,7 +10,7 @@ const Contact = () => {
 
     return (
         <Columns className="fullwidth">
-            <Column centered
+            <Column centered="true"
                 mobile={{
                     size: 10,
                     offset: 1
@@ -32,15 +32,15 @@ const Contact = () => {
                     size: 8,
                     offset: 2
                 }}>
-                <Columns centered className="hard-flex">
+                <Columns centered={true} className="hard-flex">
 
                     {Object.keys(socials).map((k, i) => {
 
                         const delay = Math.random().toFixed(2);
 
                         return (
-                            <ReactWOW delay={`${delay}s`} animation="fadeIn" duration="0.75s">
-                                <ContactEl contactProps={socials[k]} key={'socials_' + i} />
+                            <ReactWOW delay={`${delay}s`} animation="fadeIn" duration="0.75s" key={'contact_wow_' + i}>
+                                <ContactEl contactProps={socials[k]} key={'contact_' + i} />
                             </ReactWOW>
                         )
                     }

@@ -6,8 +6,8 @@ const Section = (props) => {
     return (
         <Hero size="fullheight" id={props.id} {...props}>
             {
-                props.imgSrc ?
-                    <div className="flt-bg-img" style={{ backgroundImage: `url(${props.imgSrc})` }} />
+                props.imgsrc ?
+                    <div className="flt-bg-img" style={{ backgroundImage: `url(${props.imgsrc})` }} />
                     :
                     null
             }

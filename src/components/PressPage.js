@@ -13,8 +13,8 @@ const Press = () => {
         <Columns>
             {press.map((p, i) => {
                 return (
-                    <ReactWOW delay={`${(Math.random() * 2).toFixed(2)}s`} animation="fadeIn" duration="0.75s">
-                        <Column size="half" offset="one-quarter" key={i} className="flt-press-type"
+                    <ReactWOW delay={`${(Math.random() * 2).toFixed(2)}s`} animation="fadeIn" duration="0.75s" key={'press_wow_' + i}>
+                        <Column size="half" offset="one-quarter" key={'press_' + i} className="flt-press-type"
                             mobile={{
                                 size: 10,
                                 offset: 1
@@ -38,7 +38,7 @@ const Press = () => {
                             <Heading>{p.title}</Heading>
                             <Columns className="fullwidth centered">
                                 {p.articles.map((a, i) => (
-                                    <PressEl key={i} pressProps={a} />
+                                    <PressEl key={'article_' + i} pressProps={a} />
                                 ))}
                             </Columns>
                         </Column>

@@ -41,8 +41,8 @@ const Navigation = () => {
           links.map((link, i) => {
             const delay = i * 100 / 1000 + 1;
             return (
-              <ReactWOW delay={`${delay}s`} animation="fadeInDown" duration="0.75s">
-                <AnchorLink href={link.url} key={'key_' + i} className="flt-navbar-item">
+              <ReactWOW delay={`${delay}s`} animation="fadeInDown" duration="0.75s" key={'nav_wow_' + i}>
+                <AnchorLink href={link.url} key={'nav_' + i} className="flt-navbar-item">
                   {link.label}
                 </AnchorLink>
               </ReactWOW>

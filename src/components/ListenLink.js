@@ -17,7 +17,7 @@ const ListenLink = (props) => {
     return (
         <Card.Footer>
             <Card.Footer.Item renderAs="a" href={url}>
-                <Icon iconId={releaser.icon}></Icon> {releaser.label}
+                <Icon iconid={releaser.icon}></Icon> {releaser.label}
             </Card.Footer.Item>
         </Card.Footer>
     )

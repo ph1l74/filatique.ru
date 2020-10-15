@@ -98,7 +98,7 @@ const Release = (props) => {
                         {
                             links.map(
                                 (link, i) => (
-                                    <ListenLink linkProps={link} key={i} />
+                                    <ListenLink linkProps={link} key={'rel_link_' + i} />
                                 )
                             )
                         }
