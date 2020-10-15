@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Listen from 'components/ListenPage';
 import Contact from 'components/ContactPage';
 import Press from 'components/PressPage';
+import Footer from 'components/Footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Section id="socials" className="flt-section socials" title="socials" >
         <Contact />
       </Section>
+      <Footer />
     </div>
   );
 }
