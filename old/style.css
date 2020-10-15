@@ -1,0 +1,175 @@
+/* variables */
+
+:root {
+    --text-color: rgba(0, 0, 0, 1);
+    --bg-color: rgba(255, 255, 255, 1);
+    --header-height: 50px;
+    --margin-medium: 20px;
+    --margin-large: 40px;
+    --margin-small: 10px;
+    --red: rgba(143, 19, 19, 1);
+    --content-min-height: 350px;
+    --border-color: rgba(255, 255, 255, 0.7);
+    --transparent: rgba(255, 255, 255, 0);
+    --desktop-cover-size: 350px;
+    --grid-padding: 5vh;
+    --font-size-basic: 1.4em;
+    --font-size-header-links: 1rem;
+    --color-blue: rgb(97, 214, 208);
+    --color-purple: rgb(255, 119, 162);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--font-size-basic);
+    display: grid;
+    grid-template-columns: var(--grid-padding) var(--grid-padding) auto var(--grid-padding) var(--grid-padding);
+    grid-template-rows: var(--grid-padding) var(--grid-padding) auto var(--grid-padding);
+    background-color: var(--bg-color);
+    background-image: url(./img/bg-cover-white.jpg);
+    background-size: 60%;
+    background-position-x: -50%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    height: var(--header-height);
+    background-color: var(--transparent);
+    position: fixed;
+}
+
+ul.header-links-list {
+    list-style: none;
+    margin-right: var(--margin-medium);
+    padding: 0;
+    margin-left: 100px;
+}
+
+.header-links-list>li {
+    font-size: var(--font-size-header-links);
+    display: inline-block;
+    padding: var(--margin-small) var(--margin-medium);
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.header-links-elem>a, .header-links-elem>a:visited, .header-links-elem>a:focus, .header-links-elem>a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-links-elem>a.active {
+    padding: var(--margin-small) var(--margin-medium);
+    font-size: var(--font-size-header-basic);
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--bg-color);
+    background: linear-gradient(219deg, var(--color-blue), var(--color-purple));
+    background-size: 400% 400%;
+    -webkit-animation: linkBg 8s ease infinite;
+    -moz-animation: linkBg 8s ease infinite;
+    animation: linkBg 8s ease infinite;
+}
+
+.header-links-list>li:not(:last-child) {
+    margin-right: var(--margin-medium);
+}
+
+main {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 100vh auto 100vh auto 100vh auto 100vh auto 100vh;
+}
+
+.section {
+    justify-self: end;
+    align-self: center;
+}
+
+.heading {
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 2;
+    text-align: right;
+}
+
+.description {
+    text-align: right;
+}
+
+.listen-button {
+    display: block;
+    float: right;
+    padding: var(--margin-small) var(--margin-medium);
+    margin-top: var(--margin-medium);
+    font-size: var(--font-size-header-basic);
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(219deg, var(--color-blue), var(--color-purple));
+    background-size: 400% 400%;
+    -webkit-animation: linkBg 8s ease infinite;
+    -moz-animation: linkBg 8s ease infinite;
+    animation: linkBg 8s ease infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes linkSpread {
+    0% {
+        opacity: 0;
+        color: var(--text-color);
+    }
+    100% {
+        opacity: 1;
+        color: var(--bg-color);
+    }
+}
+
+@-webkit-keyframes linkBg {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes linkBg {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes linkBg {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
