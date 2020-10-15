@@ -28,7 +28,8 @@ export const icons = {
   lastfm: 'lastfm',
   discogs: 'discogs',
   mixcloud: 'mixcloud',
-  telegram: 'telegram'
+  telegram: 'telegram',
+  twitter: 'twitter'
 
 }
 
@@ -81,6 +82,11 @@ export const socials = {
   instagram: {
     icon: icons.instagram,
     url: 'https://www.instagram.com/filatique/',
+    blank: true
+  },
+  twitter: {
+    icon: icons.twitter,
+    url: 'https://twitter.com/filatique',
     blank: true
   },
   facebook: {
