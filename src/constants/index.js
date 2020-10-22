@@ -174,6 +174,18 @@ export const releases = [
     description: "Nightroads — мой второй альбом, представляющий из себя историю историй. Десять совершенно разных сюжетов, объединенных тем, что собраны они одним человеком. Название выбрано не случайно, так как в основе идеи для альбома лежит почти что одноименная книга Гайто Газданова «Ночные дороги». Главным героем книги является водитель такси, работающий каждую ночь на улицах Парижа. Именно это атмосферу ночной столицы Франции я и хотел передать. В качестве обложки была выбрана картина Джеймса Уистлера, которая вызывает в моей голове образы одиноких парижских столбов, наблюдающих за проносящимися снизу автомобилями. В общем, приятного прослушивания и погружения.",
     links: [
       {
+        releaser: releasers.appleMusic,
+        url: 'https://music.apple.com/ru/album/nightroads/1536139511?l=en'
+      },
+      {
+        releaser: releasers.spotify,
+        url: 'https://open.spotify.com/album/57AVxL6GrxACO24I5mgHT1'
+      },
+      {
+        releaser: releasers.youtube,
+        url: 'https://www.youtube.com/watch?v=V0JppJqRfEc&list=OLAK5uy_l_1a6SMpqNNTSZIvhpN1My_A33hFWMj3M&ab_channel=Filatique-Topic'
+      },
+      {
         releaser: releasers.bandcamp,
         url: 'https://filatique.bandcamp.com/album/nightroads'
       }
