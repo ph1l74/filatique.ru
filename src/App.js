@@ -6,6 +6,7 @@ import Listen from 'components/ListenPage';
 import Contact from 'components/ContactPage';
 import Press from 'components/PressPage';
 import Footer from 'components/Footer';
+import Starter from 'components/Starter';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div>
       <Navigation />
       <Section id="home" className="flt-section home" title="filatique" imgsrc="/img/bg-cover.jpg">
+        <Starter />
       </Section>
       <Section id="listen" className="flt-section listen" title="listen">
         <Listen />

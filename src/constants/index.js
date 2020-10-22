@@ -33,7 +33,7 @@ export const icons = {
 
 }
 
-const releasers = {
+export const releasers = {
   appleMusic: {
     icon: icons.apple,
     label: 'Apple Music'

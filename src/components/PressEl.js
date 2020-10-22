@@ -24,10 +24,8 @@ const PressEl = (props) => {
             fullhd={{
                 size: 12
             }}>
-            {/* <a href={url} target="_blank" rel="noopener noreferrer"> */}
             <div className="flt-press-el-source">{source}</div>
             <div className="flt-press-el-title">{title}</div>
-            {/* </a> */}
         </Column>
     )
 }
