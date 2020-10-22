@@ -139,10 +139,9 @@ a
             opacity: 1;
     
 .release
-    @include transition(transform 0.25s, opacity 0.25s);
-    opacity: 0.5;
+    @include transition(transform 0.25s);
+    // opacity: 0.5;
     &:hover
-        opacity: 0.8
         cursor: pointer
         transform: scale(1.02);
         -webkit-box-shadow: -1px -1px 39px -19px rgba(255,255,255,0.75);
@@ -186,7 +185,6 @@ a
 
 
 .flt-section-title 
-    
     font-weight: 400;
     font-size: 6em;
     color: rgba(255,255,255, 0.25);
@@ -204,18 +202,22 @@ a
     color: rgba(255,255,255,1);
     margin-bottom: 40px;
     .title
-        text-shadow: 2px 2px rgba(255, 255, 255, 0.3), 4px 4px rgba(255, 255, 255, 0.15), 6px 6px rgba(255, 255, 255, 0.05);
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
         color: rgba(255,255,255,1);
 
 .flt-press-el
     @include transition(transform 0.25s, opacity 0.25s, box-shadow 0.25s);
     background: white;
     font-family: $fontArticle;
-    box-shadow: 5px 5px rgba(255, 255, 255, 0.4), 10px 10px rgba(255, 255, 255, 0.2), 15px 15px rgba(255, 255, 255, 0.05);
-    margin-bottom: 20px;
+    // box-shadow: 5px 5px rgba(0, 0, 0, 0.3), 10px 10px rgba(255, 255, 255, 0.2), 15px 15px rgba(255, 255, 255, 0.05);
+    -webkit-box-shadow: -1px -1px 39px -19px rgba(255,255,255,0.75);
+    -moz-box-shadow: -1px -1px 39px -19px rgba(255,255,255,0.75);
+    box-shadow: -1px -1px 39px -19px rgba(255,255,255,0.75);
+    margin-bottom: 10px;
     &:hover
         transform: scale(1.02);
-        box-shadow: 0px 0px rgba(255, 255, 255, 0.4), 0px 0px rgba(255, 255, 255, 0.2), 0px 0px rgba(255, 255, 255, 0.05);
+        color: #7f307f;
+        // box-shadow: 0px 0px rgba(255, 255, 255, 0.4), 0px 0px rgba(255, 255, 255, 0.2), 0px 0px rgba(255, 255, 255, 0.05);
 
     .flt-press-el-source
         font-size: 0.8em;
@@ -224,7 +226,7 @@ a
 
     .flt-press-el-title
         font-size: 1.1em;
-        margin-top: 20px;
+        margin-top: 10px;
         font-weight: 200;
 
     a
@@ -232,7 +234,8 @@ a
 
 .press 
     background: rgb(123,177,175);
-    background: linear-gradient(135deg, rgba(123,177,175,1) 0%, rgba(33,161,156,1) 100%);
+    background: linear-gradient(135deg, #5e3f60 0%, #a12121 100%);
+    
 
 .socials
     .flt-section-title
@@ -251,7 +254,7 @@ a
         background: linear-gradient(315deg, rgba(130,8,8,1) 0%, rgba(233,64,144,1) 43%, rgba(242,47,33,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#820808",endColorstr="#f22f21",GradientType=1);
         background-size: 400% 400%;
-        animation: bgAnimation 30s ease infinite;
+        animation: bgAnimation 10s ease infinite;
 
     &.listen
         box-shadow: 0 10px 20px rgba(15, 15, 15, 0.3);
