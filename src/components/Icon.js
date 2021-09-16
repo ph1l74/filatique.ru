@@ -1,5 +1,6 @@
 import React from 'react';
 import { Applemusic, Bandcamp, Deezer, Soundcloud, Spotify, Youtubemusic, Vk, Facebook, Gmail, Instagram, Tumblr, Mixcloud, LastDotFm, Discogs, Telegram, Twitter } from '@icons-pack/react-simple-icons';
+import { ReactComponent as Yandex } from '../icons/yandex.svg';
 import { icons } from '../constants';
 
 
@@ -44,6 +45,8 @@ const Icon = (props) => {
                 return <Telegram {...options} />
             case icons.twitter:
                 return <Twitter {...options} />
+            case icons.yandex:
+                return <Yandex className="yandex-logo" />
             default:
                 return <span></span>
         }

@@ -60,6 +60,9 @@ export const releasers = {
   },
   juno: {
     label: 'JunoRecords'
+  },
+  yandex: {
+    label: 'Yandex Music'
   }
 }
 
@@ -158,6 +161,10 @@ export const releases = [
         url: 'https://open.spotify.com/album/3V8i9w61YUBQ6zQqnZkMgn'
       },
       {
+        releaser: releasers.yandex,
+        url: 'https://music.yandex.ru/album/15773664'
+      },
+      {
         releaser: releasers.youtube,
         url: 'https://www.youtube.com/watch?v=YvSz5x7Gmzs&list=OLAK5uy_l8ncIIjfoOQ_xTz5ntMsQaaLMzl5odX0I&ab_channel=Filatique-Topic'
       },
@@ -182,6 +189,10 @@ export const releases = [
         url: 'https://open.spotify.com/album/57AVxL6GrxACO24I5mgHT1'
       },
       {
+        releaser: releasers.yandex,
+        url: 'https://music.yandex.ru/album/15970422'
+      },
+      {
         releaser: releasers.youtube,
         url: 'https://www.youtube.com/watch?v=V0JppJqRfEc&list=OLAK5uy_l_1a6SMpqNNTSZIvhpN1My_A33hFWMj3M&ab_channel=Filatique-Topic'
       },
@@ -204,6 +215,10 @@ export const releases = [
       {
         releaser: releasers.spotify,
         url: 'https://open.spotify.com/album/0KHLBF4keOycNG5cWukNoK'
+      },
+      {
+        releaser: releasers.yandex,
+        url: 'https://music.yandex.ru/album/15970417'
       },
       {
         releaser: releasers.youtube,

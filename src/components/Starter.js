@@ -19,6 +19,10 @@ const Starter = () => {
             url: 'https://open.spotify.com/album/41XMkhYKTnSERIPrJ9iPKU'
         },
         {
+            releaser: releasers.yandex,
+            url: 'https://music.yandex.ru/album/15970415'
+        },
+        {
             releaser: releasers.youtube,
             url: 'https://www.youtube.com/watch?v=AkA2eZYC7UI&list=OLAK5uy_mSkOyMx1jmCPnlzoqFPdxgZ2jLVVuBj8Y'
         }
