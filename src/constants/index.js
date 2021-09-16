@@ -241,7 +241,7 @@ export const press = [
     articles: [
       {
         source: 'Far From Moscow',
-        url: 'https://online.flowpaper.com/74dd071e/20145VymirOneGinPleaseAntethicandOvercampsFlowPaperJoined/#page=34',
+        url: 'https://online.flowpaper.com/74dd071e/2016AlesTsurkoAYEquinoxFlowerandChitoonFlowPaperJoined/#page=9',
         title: 'High-Frequency Pressures: Cream Soda, Mamanet, Naadya, and Filatique'
       }
     ]
@@ -261,7 +261,7 @@ export const press = [
     articles: [
       {
         source: 'Far From Moscow',
-        url: 'https://online.flowpaper.com/74dd071e/2016AlesTsurkoAYEquinoxFlowerandChitoonFlowPaperJoined/#page=9',
+        url: 'https://online.flowpaper.com/74dd071e/20145VymirOneGinPleaseAntethicandOvercampsFlowPaperJoined/#page=34',
         title: 'Abstract Worlds: Ewan Limb, Filatique, Moonscape, and Phil Anker'
       }
     ]

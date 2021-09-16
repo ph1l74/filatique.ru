@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Columns from 'react-bulma-components/lib/components/columns';
 import Image from 'react-bulma-components/lib/components/image';
-import Heading from 'react-bulma-components/lib/components/heading';
 import { releasers } from '../constants';
 import Icon from './Icon';
 
